@@ -55,8 +55,8 @@ A production-ready AI system for **real-time people counting** and **occupancy m
 **Standard Setup (Desktop/Laptop):**
 ```bash
 # Clone the repository
-git clone https://github.com/ayyoubbenmansour/Realtime-Crowd-Counting-Detection.git
-cd Realtime-Crowd-Counting-Detection
+git clone https://github.com/ayyoubbenmansour/Crowd_Counting_Detection_RaspberryPi.git
+cd Crowd_Counting_Detection_RaspberryPi
 
 # Install dependencies
 pip install -r requirements.txt
@@ -68,8 +68,8 @@ python Crowd_Counting_rpi.py --interactive
 **Raspberry Pi Setup:**
 ```bash
 # Clone and navigate
-git clone https://github.com/ayyoubbenmansour/Realtime-Crowd-Counting-Detection.git
-cd Realtime-Crowd-Counting-Detection
+git clone https://github.com/ayyoubbenmansour/Crowd_Counting_Detection_RaspberryPi.git
+cd Crowd_Counting_Detection_RaspberryPi
 
 # Auto-setup script
 chmod +x setup_rpi.sh
@@ -238,7 +238,7 @@ ls /dev/video*
 ## 📁 Project Structure
 
 ```
-Realtime-Crowd-Counting-Detection/
+Crowd_Counting_Detection_RaspberryPi/
 ├── Crowd_Counting_rpi.py      # Main application (502 lines)
 ├── README.md                   # Documentation
 ├── requirements.txt            # Python dependencies
@@ -365,7 +365,7 @@ Built with:
 
 **Made with ❤️ for smart building management**
 
-[Report Bug](https://github.com/ayyoubbenmansour/Realtime-Crowd-Counting-Detection/issues) · 
-[Request Feature](https://github.com/ayyoubbenmansour/Realtime-Crowd-Counting-Detection/issues)
+[Report Bug](https://github.com/ayyoubbenmansour/Crowd_Counting_Detection_RaspberryPi/issues) · 
+[Request Feature](https://github.com/ayyoubbenmansour/Crowd_Counting_Detection_RaspberryPi/issues)
 
 </div>
