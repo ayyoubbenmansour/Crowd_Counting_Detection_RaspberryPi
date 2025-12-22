@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="px-4 py-6 sm:px-0">
+    <div class="mb-8 text-center">
+        <h1 class="text-4xl font-extrabold tracking-tight text-white mb-2">Live Surveillance</h1>
+        <p class="text-gray-400">Real-time occupancy monitoring and crowd analytics</p>
+    </div>
+
+    <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-700 relative group">
+        <!-- Live Badge -->
+        <div class="absolute top-4 left-4 z-10">
+            <span
+                class="bg-red-600/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded shadow-lg flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                LIVE
+            </span>
+        </div>
+
+        <div class="aspect-w-16 aspect-h-9 bg-black flex items-center justify-center">
+            <img src="{{ url_for('video_feed') }}" class="w-full h-full object-contain" alt="Live Camera Feed">
+        </div>
+
+        <div class="p-6 bg-gray-800 border-t border-gray-700">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="flex items-center space-x-4">
+                    <div class="p-3 bg-gray-700 rounded-lg text-orange-500">
+                        <i class="fa-solid fa-camera fa-lg"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-400">Source</p>
+                        <p class="font-semibold">Primary Camera</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="p-3 bg-gray-700 rounded-lg text-blue-500">
+                        <i class="fa-solid fa-chart-line fa-lg"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-400">Analytics</p>
+                        <p class="font-semibold">YOLO11 Tracking</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="p-3 bg-gray-700 rounded-lg text-green-500">
+                        <i class="fa-solid fa-check-circle fa-lg"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-400">Status</p>
+                        <p class="font-semibold text-green-400">Operational</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

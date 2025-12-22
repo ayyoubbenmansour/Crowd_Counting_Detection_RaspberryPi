@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Crowd Counting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="bg-gray-900 text-white font-sans antialiased selection:bg-orange-500 selection:text-white">
+
+    <nav class="border-b border-gray-800 bg-gray-900/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 text-orange-500">
+                        <i class="fa-solid fa-users-viewfinder text-2xl"></i>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="/"
+                                class="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 {{ 'text-orange-500' if request.endpoint == 'index' else 'text-gray-300' }}">
+                                <i class="fa-solid fa-video mr-2"></i>Live Feed
+                            </a>
+                            <a href="/upload"
+                                class="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 {{ 'text-orange-500' if request.endpoint == 'upload_file' else 'text-gray-300' }}">
+                                <i class="fa-solid fa-upload mr-2"></i>Upload Video
+                            </a>
+                            <a href="/settings"
+                                class="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 {{ 'text-orange-500' if request.endpoint == 'settings' else 'text-gray-300' }}">
+                                <i class="fa-solid fa-sliders mr-2"></i>Settings
+                            </a>
+                            <a href="/logs"
+                                class="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 {{ 'text-orange-500' if request.endpoint == 'view_logs' else 'text-gray-300' }}">
+                                <i class="fa-solid fa-list mr-2"></i>Logs
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span class="bg-gray-800 text-xs font-mono py-1 px-2 rounded border border-gray-700">
+                        <span class="w-2 h-2 inline-block rounded-full bg-green-500 mr-1 animate-pulse"></span>
+                        SYSTEM ACTIVE
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="border-t border-gray-800 mt-12 py-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2025/2026 Real-time Crowd Counting.</p>
+            <p>Developed by : Ayyoub Benmansour</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

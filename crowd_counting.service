@@ -1,0 +1,14 @@
+[Unit]
+Description=Hallway Monitor Crowd Counting Service
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/Desktop/Realtime-Crowd-Counting-Detection
+ExecStart=/usr/bin/python3 app.py
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
